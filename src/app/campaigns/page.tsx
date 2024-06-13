@@ -37,8 +37,6 @@ export default function Campaigns() {
     return data?.find((item) => item.id === selectedCampaign?.value);
   }, [data, selectedCampaign?.value]);
 
-  console.log(selectedCampaignChartData);
-
   return (
     <Container className="flex flex-col gap-8">
       <Select
@@ -46,7 +44,6 @@ export default function Campaigns() {
         placeholder="Choose one"
         className="w-fit"
         data={data?.map((item) => ({ value: item.id, label: item.name }))}
-        clearable
         value={selectedCampaign ? selectedCampaign.value : null}
         onChange={(_value, option) => setSelectedCampaign(option)}
       />
