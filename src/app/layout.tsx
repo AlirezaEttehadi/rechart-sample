@@ -6,6 +6,8 @@ import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 import Header from "@techsiro/components/header";
 
+import ProgressContext from "@techsiro/context/progress.context";
+
 import "@mantine/core/styles.css";
 import "./globals.css";
 
@@ -27,8 +29,10 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <MantineProvider>
-          <Header />
-          <main>{children}</main>
+          <ProgressContext>
+            <Header />
+            <main>{children}</main>
+          </ProgressContext>
         </MantineProvider>
       </body>
     </html>
