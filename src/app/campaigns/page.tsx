@@ -46,6 +46,7 @@ export default function Campaigns() {
         data={data?.map((item) => ({ value: item.id, label: item.name }))}
         value={selectedCampaign ? selectedCampaign.value : null}
         onChange={(_value, option) => setSelectedCampaign(option)}
+        allowDeselect={false}
       />
       <div>
         <h2 className="text-purple-400">Installs</h2>
