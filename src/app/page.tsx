@@ -1,3 +1,7 @@
+"use client";
+
+import { Button } from "@mantine/core";
+
 export default function Home() {
-  return <div>Main</div>;
+  return <Button variant="filled">Button</Button>;
 }
