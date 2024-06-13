@@ -4,6 +4,8 @@ import { ReactNode } from "react";
 
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
+import Header from "@techsiro/components/header";
+
 import "@mantine/core/styles.css";
 import "./globals.css";
 
@@ -25,6 +27,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <MantineProvider>
+          <Header />
           <main>{children}</main>
         </MantineProvider>
       </body>
