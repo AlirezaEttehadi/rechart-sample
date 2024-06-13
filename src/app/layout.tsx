@@ -5,8 +5,8 @@ import { ReactNode } from "react";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 import Header from "@techsiro/components/header";
-
 import ProgressContext from "@techsiro/context/progress.context";
+import SWRContext from "@techsiro/context/swr.context";
 
 import "@mantine/core/styles.css";
 import "./globals.css";
@@ -30,8 +30,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <MantineProvider>
           <ProgressContext>
-            <Header />
-            <main>{children}</main>
+            <SWRContext>
+              <Header />
+              <main>{children}</main>
+            </SWRContext>
           </ProgressContext>
         </MantineProvider>
       </body>
